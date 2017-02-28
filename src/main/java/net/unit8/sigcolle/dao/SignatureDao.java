@@ -21,4 +21,7 @@ public interface SignatureDao {
 
     @Insert
     int insert(Signature signature);
+
+    @Select
+    int selectBySignatureUserId(Long signatureUserId,Long campaignId);
 }

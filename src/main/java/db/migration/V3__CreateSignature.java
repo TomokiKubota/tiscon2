@@ -16,6 +16,7 @@ public class V3__CreateSignature implements JdbcMigration {
                     "signature_id INTEGER DEFAULT 1 AUTO_INCREMENT PRIMARY KEY," +
                     "name VARCHAR(30) NOT NULL," +
                     "signature_comment CLOB," +
+                    "signature_user_id INTEGER," +
                     "campaign_id INTEGER NOT NULL," +
                     "FOREIGN KEY (campaign_id) REFERENCES campaign(campaign_id)" +
                     ")"

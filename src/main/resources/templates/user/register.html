@@ -35,12 +35,14 @@
                                 </div>
                                 <div class="field" th:classappend="${user.hasErrors('email')} ? 'error'">
                                     <input type="email" name="email" placeholder="メールアドレス" th:value="(${user.email}!=null)?${user.email}"/>
+                                    携帯アドレスまたはPCアドレス
                                     <ul class="ui pointing red basic label" th:if="${user.hasErrors('email')}">
                                         <li th:each="message : ${user.getErrors('email')}" th:text="${message}"></li>
                                     </ul>
                                 </div>
                                 <div class="field" th:classappend="${user.hasErrors('pass')} ? 'error'">
                                     <input type="password" name="pass" placeholder="パスワード"/>
+                                   数字 / 英大文字 / 英小文字 のすべてを1つ以上含ませてください
                                     <ul class="ui pointing red basic label" th:if="${user.hasErrors('pass')}">
                                         <li th:each="message : ${user.getErrors('pass')}" th:text="${message}"></li>
                                     </ul>
