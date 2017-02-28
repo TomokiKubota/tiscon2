@@ -42,6 +42,8 @@ public class SigColleApplicationFactory implements ApplicationFactory {
             r.get("/campaign/:campaignId/signatures").to(SignatureController.class, "list");
             r.get("/register").to(RegisterController.class, "index");
             r.post("/register").to(RegisterController.class, "register");
+            r.post("/change").to(ChangeController.class, "listUserInfo");
+            r.get("/change").to(ChangeController.class, "index2");
             r.get("/login").to(LoginController.class, "index");
             r.post("/login").to(LoginController.class, "login");
             r.get("/logout").to(LoginController.class, "logout");
